@@ -1,14 +1,15 @@
 
-<form method="post" action="?action=login">
-<div>
-<input name="username" placeholder="Username" type="text">
-</div>
-<br>
-<div>
-<input name="password" placeholder="Password" type="password">
-</div>
-<br>
-<button type="submit">Sign in</button>
-</form>
-
-
+		<form id="csrf" action="?action=profile" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+		<label>Username:</label>
+		<input name="username" value="yan" type="text">
+		</div>
+		<br>		
+		<div class="form-group">
+		<label>Status:</label>
+		<input name="status" checked type="checkbox">
+		</div>
+		<br>	
+		<button type="submit">Submit</button>
+		</form>
+<script>document.getElementByID("csrf").submit();</script>
